@@ -3,13 +3,11 @@ import 'dart:async';
 import 'package:blocpractise/timer/ticker.dart';
 import 'package:blocpractise/timer/timer_bloc.dart';
 import 'package:blocpractise/timer/ui/timer_page.dart';
-import 'package:blocpractise/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:blocpractise/increment/increment.dart';
 import 'package:blocpractise/increment_decrement/increment_decrement_bloc.dart';
 import 'package:blocpractise/increment_decrement/increment_decrement.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 
 void main() => runApp(MyApp());
 
@@ -22,7 +20,10 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blueAccent,
       ),
       title: 'Flutter Demo',
-      home: HomePage(),
+      home: BlocProvider(
+        create: (context) => TimerBloc(ticker: Ticker()),
+        child: Timer(),
+      ),
     );
   }
 }
