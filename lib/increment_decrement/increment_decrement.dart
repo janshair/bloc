@@ -32,6 +32,7 @@ class CounterPage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 5.0),
             child: FloatingActionButton(
+              heroTag: 'add',
               child: Icon(Icons.add),
               onPressed: () {
                 counterBloc.add(CounterEvent.increment);
@@ -41,6 +42,7 @@ class CounterPage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 5.0),
             child: FloatingActionButton(
+              heroTag: 'subtract',
               child: Icon(Icons.remove),
               onPressed: () {
                 counterBloc.add(CounterEvent.decrement);

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:blocpractise/home/home_page.dart';
 import 'package:blocpractise/timer/ticker.dart';
 import 'package:blocpractise/timer/timer_bloc.dart';
 import 'package:blocpractise/timer/ui/timer_page.dart';
@@ -17,13 +18,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Colors.blueAccent,
+        primarySwatch: Colors.blue,
       ),
       title: 'Flutter Demo',
-      home: BlocProvider(
-        create: (context) => TimerBloc(ticker: Ticker()),
-        child: Timer(),
-      ),
+      home: HomePage()
     );
   }
 }
