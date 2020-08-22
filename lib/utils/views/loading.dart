@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+
+import 'package:blocpractise/utils/adaptive/screen_widgets.dart';
+import 'package:flutter/widgets.dart';
 
 class LoadingScreen extends StatelessWidget {
   final String waitingMessage;
@@ -14,7 +15,7 @@ class LoadingScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-        CircularProgressIndicator(),
+          AdaptiveProgress(),
         Text(this.waitingMessage)
       ],
       ),
